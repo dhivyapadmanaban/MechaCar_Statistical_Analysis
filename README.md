@@ -13,11 +13,11 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 
 The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. Design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file.
 
-### RESULTS 
+### Results 
 
 ![image](https://user-images.githubusercontent.com/83181834/128647689-6587b1ae-656d-45a6-a793-22da7a109f6c.png)
 
-### SUMMARY
+### Satistical Summary
 
 1. The **vehicle length, and vehicle ground clearance are statistically likely to provide non-random amounts of variance** to the model. That is to say, the vehicle length and vehicle ground clearance have a significant impact on miles per gallon on the MechaCar prototype. Conversely, the vehicle weight, spoiler angle, and All Wheel Drive (AWD) have p-Values that indicate a random amount of variance with the dataset.
 
@@ -25,7 +25,7 @@ The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCar
 
 3. This linear model has an **r-squared value of 0.7149**, which means that approximately 71% of all mpg predictions will be determined by this model. Relatively speaking, his multiple regression model does predict mpg of MechaCar prototypes effectively.
 
-## Deliverable 1
+## Deliverable 2
 
 ## Summary Statistics on Suspension Coils
 
@@ -43,3 +43,42 @@ The MechaCar Suspension_Coil.csv dataset contains the results from multiple prod
 **Lot Summary dataframe:**
 
 ![image](https://user-images.githubusercontent.com/83181834/128647852-ad33465a-2ad4-4ff8-82ad-ed0df27246cd.png)
+
+#### Statistical  Summary
+
+When looking at the entire population of the production lot, the variance of the coils is **62.29 PSI**, which is well within the 100 PSI variance requirement.
+
+Similarly, but significantly more consistent, Lot 1 and Lot 2 are well within the 100 PSI variance requirement; **with variances of 0.98 and 7.47 respectively**. However, it is **Lot 3 that is showing much larger variance** in performance and consistency, with a variance of 170.29. It is Lot 3 that is disproportionately causing the variance at the full lot level.
+
+## Deliverable 3
+
+## T-Tests on Suspension Coils
+
+Using R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+
+### Results
+
+![image](https://user-images.githubusercontent.com/83181834/128648271-ca5bf42c-9bcb-4702-8430-f2d521dcadec.png)
+
+
+![image](https://user-images.githubusercontent.com/83181834/128648294-979f9ba4-4569-4b1f-a8a6-8535eba0dee1.png)
+
+### Statistical Summary
+
+From here we can see the **true mean of the sample is 1498.78**, which we also saw in the summary statistics above. With a p-Value of 0.06, which is higher than the common significance level of 0.05, there is NOT enough evidence to support rejecting the null hypothesis. That is to say, the mean of all three of these manufacturing lots is statistically similar to the presumed population mean of 1500.
+
+Next looking at each individual lots:
+
+- Lot 1 sample actually has the **true sample mean of 1500**, again as we saw in the summary statistics above. With a **p-Value of 1**, clearly we cannot reject (i.e. accept) the null hypothesis that there is no statistical difference between the observed sample mean and the presumed population mean (1500).
+- Lot 2 has essentially the same outcome with a **sample mean of 1500.02, a p-Value of 0.61**; the null hypothesis cannot be rejected, and the sample mean and the population mean of 1500 are statistically similar.
+- However, Lot 3, not surprisingly is a different scenario. Here the s**ample mean is 1496.14 and the p-Value is 0.04,** which is lower than the common significance level of 0.05. All indicating to reject the null hypothesis that this sample mean and the presumed population mean are not statistically different.
+
+
+
+
+## Statistical Summary
+
+
+
+
+
