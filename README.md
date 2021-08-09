@@ -2,11 +2,6 @@
 
 AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management has called the data analytics team to review the production data for the following insights that may help the manufacturing team.
 
-- Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes
-- Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots
-- Run t-tests to determine if the manufacturing lots are statistically different from the mean population
-- Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a summary interpretation of the findings.
-
 ## Deliverable 1
 
 ## Linear Regression to Predict MPG
@@ -71,13 +66,36 @@ Next looking at each individual lots:
 
 - Lot 1 sample actually has the **true sample mean of 1500**, again as we saw in the summary statistics above. With a **p-Value of 1**, clearly we cannot reject (i.e. accept) the null hypothesis that there is no statistical difference between the observed sample mean and the presumed population mean (1500).
 - Lot 2 has essentially the same outcome with a **sample mean of 1500.02, a p-Value of 0.61**; the null hypothesis cannot be rejected, and the sample mean and the population mean of 1500 are statistically similar.
-- However, Lot 3, not surprisingly is a different scenario. Here the s**ample mean is 1496.14 and the p-Value is 0.04,** which is lower than the common significance level of 0.05. All indicating to reject the null hypothesis that this sample mean and the presumed population mean are not statistically different.
+- However, Lot 3, not surprisingly is a different scenario. Here the s**ample mean is 1496.14 and the p-Value is 0.04,** which is lower than the common significance level of 0.05. All indicating to reject the null hypothesis that this sample mean and the presumed population mean are statistically different.
 
+## Study Design: MechaCar vs Competition
 
+In this study design, Mechacar data is statistically analyzed and compared against one or more competitor's comparable data. This involve variety of metrics such as cost, city or highway fuel efficiency, maintenance cost or safety rating which may be of interest to potential consumers as well as AutosRU's manufacturing.
 
+### Metrics
 
-## Statistical Summary
+Although there are multiple metrics to consider as explained above, we are going to focus on **"COST"** metric and compare it to the mean value of the competitors. Finding vehicles which are similar as much as possible to MechaCar and collect the metric data for our statistical testing.
 
+### Hypothesis
+
+After identifying the metric to be tested **(COST)**,  it is imperative to identify our null and alternative hypotheses.
+  - Null Hypothesis : Null hypothesis would be there is no statistical difference between the cost of MechaCar and other competitors.
+  - Alternative Hypothesis : Alternative hypothesis would be that there is a statistical difference between MechaCar and other competitors.
+
+### Statistical Test
+
+  Since this is large real-world numerical data where we are comparing the means across more than two group, the most straightforward way to do this is to use the **analysis of variance (ANOVA) test**, which is used to compare the means of a continuous numerical variable across a number of groups. ANOVA test would tell us to test the null hypothesis. 
+  In this case, sample mean would include MechaCar's Cost value and mean Cost values from samples of similar competitor vehicles.
+  
+### Data - Statistical Test
+
+  To perform this **ANOVA test**, we would need one continous, numerical variable for the dependent variable and COST would satisfy that requirement. For the independent variable specification when using ANOVA, we could compare vehicles of the same class using multiple categorical variables which would be the different vehicles for comparison.
+ 
+  We need to use R's aov() method to run the ANOVA test and R's summary() function to retrieve the summary statistics which has the p-value to determine the analysis.
+  
+  ![image](https://user-images.githubusercontent.com/83181834/128781900-e2eefaa6-05b1-4e6a-be39-798657e66230.png)
+  
+  If the p-value is below 0.05, we have sufficient statistical reasoning to reject null hypothesis and determine the means of all groups are same.  In any case, the ANOVA test can prove quite useful for comparing the means of a continous numerical variable across multiple categorical variables and could aid AutosRU in understanding better how their prototype fares against the competition.
 
 
 
