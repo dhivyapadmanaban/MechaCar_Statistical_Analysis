@@ -6,13 +6,13 @@ AutosRUs’ newest prototype, the MechaCar, is suffering from production trouble
 
 ## Linear Regression to Predict MPG
 
-The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. Design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file.
+The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drive train, and ground clearance, were collected for each vehicle. Design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file.
 
 ### Results 
 
 ![image](https://user-images.githubusercontent.com/83181834/128647689-6587b1ae-656d-45a6-a793-22da7a109f6c.png)
 
-### Satistical Summary
+### Statistical Summary
 
 1. The **vehicle length, and vehicle ground clearance are statistically likely to provide non-random amounts of variance** to the model. That is to say, the vehicle length and vehicle ground clearance have a significant impact on miles per gallon on the MechaCar prototype. Conversely, the vehicle weight, spoiler angle, and All Wheel Drive (AWD) have p-Values that indicate a random amount of variance with the dataset.
 
@@ -26,7 +26,7 @@ The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCar
 
 The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to determine if the manufacturing process is consistent across production lots. Using R, create a summary statistics table to show:
 
-- The suspension coil’s PSI continuous variable across all manufacturing lots
+- The suspension coils PSI continuous variable across all manufacturing lots
 - The following PSI metrics for each lot: mean, median, variance, and standard deviation.
 
 ### Results 
@@ -70,7 +70,7 @@ Next looking at each individual lots:
 
 ## Study Design: MechaCar vs Competition
 
-In this study design, Mechacar data is statistically analyzed and compared against one or more competitor's comparable data. This involve variety of metrics such as cost, city or highway fuel efficiency, maintenance cost or safety rating which may be of interest to potential consumers as well as AutosRU's manufacturing.
+In this study design, MechaCar data is statistically analyzed and compared against one or more competitor's comparable data. This involve variety of metrics such as cost, city or highway fuel efficiency, maintenance cost or safety rating which may be of interest to potential consumers as well as AutosRU's manufacturing.
 
 ### Metrics
 
@@ -89,13 +89,13 @@ After identifying the metric to be tested **(COST)**,  it is imperative to ident
   
 ### Data - Statistical Test
 
-  To perform this **ANOVA test**, we would need one continous, numerical variable for the dependent variable and COST would satisfy that requirement. For the independent variable specification when using ANOVA, we could compare vehicles of the same class using multiple categorical variables which would be the different vehicles for comparison.
+  To perform this **ANOVA test**, we would need one continuous, numerical variable for the dependent variable and COST would satisfy that requirement. For the independent variable specification when using ANOVA, we could compare vehicles of the same class using multiple categorical variables which would be the different vehicles for comparison.
  
   We need to use R's aov() method to run the ANOVA test and R's summary() function to retrieve the summary statistics which has the p-value to determine the analysis.
   
   ![image](https://user-images.githubusercontent.com/83181834/128781900-e2eefaa6-05b1-4e6a-be39-798657e66230.png)
   
-  If the p-value is below 0.05, we have sufficient statistical reasoning to reject null hypothesis and determine the means of all groups are same.  In any case, the ANOVA test can prove quite useful for comparing the means of a continous numerical variable across multiple categorical variables and could aid AutosRU in understanding better how their prototype fares against the competition.
+  If the p-value is below 0.05, we have sufficient statistical reasoning to reject null hypothesis and determine the means of all groups are same.  In any case, the ANOVA test can prove quite useful for comparing the means of a continuous numerical variable across multiple categorical variables and could aid AutosRU in understanding better how their prototype fares against the competition.
 
 
 
